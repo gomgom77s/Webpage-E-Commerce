@@ -22,11 +22,20 @@ nav ul{
 }
 nav ul li{
     display: inline-block;
-    margin: 20px;
+    margin: 10px;
+    transition: 0.4s;
+    height: 25px;
+    border-radius: 5px;
+}
+nav ul li:hover{
+    background: #dabbb4;
+    box-sizing: 30px;
 }
 a{
     text-decoration: none;
     color: #555;
+    font-size: 20px;
+    font-weight: bold;
 }
 p{
     color: #555;
@@ -233,4 +242,64 @@ footer-col-2 img{
 }
 ul{
     list-style-type: none;
+}
+.app-logo{
+    margin-top: 20px;
+}
+.app-logo img{
+    width: 140px;
+}
+.footer hr{
+    border: none;
+    background: #b5b5b5;
+    height: 1px;
+    margin: 20px 0;
+}
+.Copyright{
+    text-align: center;
+}
+.menu-icon{
+    width: 28px;
+    margin-left: 20px;
+    display: none;
+}
+
+/*-----media query for menu-----*/
+@media only screen and (max-width: 800px){
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: #333;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+
+    }
+    nav ul li{
+        display: grid;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        /* transform: translateY(-100%); */
+        z-index: -1;
+        transition: 0.6s;
+    }
+    nav ul li a{
+        color: #fff;
+    }
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+    
+}
+/*-----media query for menu less than 600 screen size-----*/
+@media only screen and (max-width: 600px){
+    .row{
+        text-align: center;
+    }
+    .col-2, .col-3, .col-4{
+        flex-basis: 100%;
+    }
 }
